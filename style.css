@@ -1,0 +1,24 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+#m_heading {
+  text-align: center;
+  color: blue;
+  background-color: black;
+  word-spacing: 7px;
+  letter-spacing: 4px;
+  margin: 0 0 0 0;
+  padding: 10px;
+  font-weight: 900;
+ text-transform: uppercase;
+}
+#d_down {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    word-spacing: 5px;
+  letter-spacing: 4px;
+}
