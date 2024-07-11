@@ -1,4 +1,3 @@
-
 function remove() {
   let html = document.getElementById("list");
   while (html.hasChildNodes()) {
