@@ -3,10 +3,10 @@
 // console.log(i_value);
 
 function remove() {
-    let html = document.getElementById('list')
-    while (html.hasChildNodes()) {
-        html.removeChild(list.firstChild);
-      }
+  let html = document.getElementById("list");
+  while (html.hasChildNodes()) {
+    html.removeChild(list.firstChild);
+  }
 }
 
 async function apicall() {
@@ -14,8 +14,6 @@ async function apicall() {
     let input = document.getElementById("input");
     let i_value = input.value;
     console.log(i_value);
-
-    
 
     const res = await fetch(
       `https://newsapi.org/v2/top-headlines?country=${i_value}&apiKey=027f4cf6e47d4ac18a800838cd8c380a`
@@ -34,8 +32,8 @@ async function apicall() {
         <a href="${source.url}" target="_blank" class="btn btn-primary">Read More</a>
         </div>`;
       const html = document.getElementById("list");
-      console.log(html);
-      list.style.display="flex";
+    //   console.log(html);
+      list.style.display = "flex";
       html.innerHTML += card;
     }
   } catch (error) {
