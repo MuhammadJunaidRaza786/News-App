@@ -22,13 +22,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 5px 6px 5px;
+  padding: 14px 5px 17px 5px;
   word-spacing: 5px;
   letter-spacing: 4px;
-  margin-bottom: 25px;
+  /* margin-bottom: 20px; */
 }
 
 #list {
   display: none;
-  margin-bottom: 100px;
+  padding-bottom: 100px !important   ;
 }
