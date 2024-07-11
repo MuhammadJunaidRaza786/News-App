@@ -18,33 +18,21 @@ async function apicall() {
     for (let source of data.articles) {
       console.log(source);
 
-      DOM(source)
-
-    //   let card = `<img src=${source.urlToImage} class="card-img-top" alt="...">
-    //     <div class="card-body">
-    //       <h5 class="card-title">${source.title}</h5>
-    //       <p class="card-text">${source.description}</p>
-    //       <a href="${source.url}" target="_blank" class="btn btn-primary">Go somewhere</a>
-    //     </div>`;
-    //   const html = document.getElementById("list");
-    //   console.log(html);
-    //   html.innerHTML += card;
+      let card = `<img src=${source.urlToImage} class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">${source.title}</h5>
+  <p class="card-text">${source.description}</p>
+  <a href="${source.url}" target="_blank" class="btn btn-primary">Go somewhere</a>
+</div>`;
+      const html = document.getElementById("list");
+      console.log(html);
+      html.innerHTML += card;
     }
   } catch (error) {
     console.log(`=====> ${error}`);
   }
 }
-function DOM(source){
-let card = `<img src=${source.urlToImage} class="card-img-top" alt="...">
-<div class="card-body">
-  <h5 class="card-title">${source.title}</h5>
-  <p class="card-text">${source.description}</p>
-  <a href="${source.url}" target="_blank" class="btn btn-primary">Read More</a>
-</div>`;
-const html = document.getElementById("list");
-console.log(html);
-html.innerHTML += card;
-}
+
 input.addEventListener("change", apicall);
 // input.addEventListener("change", apicall);
 
