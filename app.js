@@ -1,6 +1,3 @@
-// let input = document.getElementById("input");
-// let i_value = document.getElementById("input").value;
-// console.log(i_value);
 
 function remove() {
   let html = document.getElementById("list");
@@ -32,7 +29,6 @@ async function apicall() {
         <a href="${source.url}" target="_blank" class="btn btn-primary">Read More</a>
         </div>`;
       const html = document.getElementById("list");
-    //   console.log(html);
       list.style.display = "flex";
       html.innerHTML += card;
     }
