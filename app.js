@@ -2,11 +2,20 @@
 // let i_value = document.getElementById("input").value;
 // console.log(i_value);
 
+function remove() {
+    let html = document.getElementById('list')
+    while (html.hasChildNodes()) {
+        html.removeChild(list.firstChild);
+      }
+}
+
 async function apicall() {
   try {
     let input = document.getElementById("input");
     let i_value = input.value;
     console.log(i_value);
+
+    
 
     const res = await fetch(
       `https://newsapi.org/v2/top-headlines?country=${i_value}&apiKey=027f4cf6e47d4ac18a800838cd8c380a`
@@ -19,13 +28,14 @@ async function apicall() {
       console.log(source);
 
       let card = `<img src=${source.urlToImage} class="card-img-top" alt="...">
-<div class="card-body">
-  <h5 class="card-title">${source.title}</h5>
-  <p class="card-text">${source.description}</p>
-  <a href="${source.url}" target="_blank" class="btn btn-primary">Go somewhere</a>
-</div>`;
+        <div class="card-body">
+        <h5 class="card-title">${source.title}</h5>
+        <p class="card-text">${source.description}</p>
+        <a href="${source.url}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>`;
       const html = document.getElementById("list");
       console.log(html);
+      list.style.display="flex";
       html.innerHTML += card;
     }
   } catch (error) {
@@ -34,7 +44,7 @@ async function apicall() {
 }
 
 input.addEventListener("change", apicall);
-// input.addEventListener("change", apicall);
+input.addEventListener("change", remove);
 
 // fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=027f4cf6e47d4ac18a800838cd8c380a`)
 // .then ((res)=> {

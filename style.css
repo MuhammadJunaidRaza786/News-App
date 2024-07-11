@@ -27,3 +27,7 @@ body {
   letter-spacing: 4px;
   margin-bottom: 25px;
 }
+
+#list {
+    display: none;
+}
